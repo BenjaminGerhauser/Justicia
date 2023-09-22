@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Data;
+using System.Drawing;
 
 namespace Justicia
 {
@@ -37,6 +38,23 @@ namespace Justicia
         public DataTable GetData()
         {
             return tabla;
+        }
+
+
+        public void grabar(string nombre, string alias, string delito, DateTime fecha, Image foto)
+        {
+            DataRow fila = tabla.NewRow();
+            fila["nombre"] = nombre;
+            fila["alias"] = alias;
+            fila["foto"] = foto;
+            fila["fecha"] = fecha;
+            fila["delitos"] = delito;
+            tabla.Rows.Add(fila);
+
+            OleDbCommandBuilder cb = new OleDbCommandBuilder(adaptador);
+            adaptador.Update(tabla);
+
+
         }
     }
 }

@@ -37,6 +37,8 @@ namespace Justicia
             this.lblAlias = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblDesde = new System.Windows.Forms.Label();
+            this.lblDelito = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,11 +120,33 @@ namespace Justicia
             this.lblDesde.TabIndex = 7;
             this.lblDesde.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // lblDelito
+            // 
+            this.lblDelito.BackColor = System.Drawing.Color.Black;
+            this.lblDelito.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDelito.ForeColor = System.Drawing.Color.Yellow;
+            this.lblDelito.Location = new System.Drawing.Point(297, 447);
+            this.lblDelito.Name = "lblDelito";
+            this.lblDelito.Size = new System.Drawing.Size(193, 27);
+            this.lblDelito.TabIndex = 8;
+            this.lblDelito.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(297, 425);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Delito";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 450);
+            this.ClientSize = new System.Drawing.Size(532, 503);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblDelito);
             this.Controls.Add(this.lblDesde);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblAlias);
@@ -150,6 +174,8 @@ namespace Justicia
         private System.Windows.Forms.Label lblAlias;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblDesde;
+        private System.Windows.Forms.Label lblDelito;
+        private System.Windows.Forms.Label label6;
     }
 }
 

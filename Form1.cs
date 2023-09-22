@@ -39,7 +39,8 @@ namespace Justicia
                     pictureBoxFoto.Image = Image.FromFile( $"Profugos/{fProfugo["foto"]}");
                     lblAlias.Text = fProfugo["alias"].ToString();
                     DateTime fecha = Convert.ToDateTime(fProfugo["profugo_desde"]);
-                    lblDesde.Text = fecha.ToString("dd/MM/yyyy"); 
+                    lblDesde.Text = fecha.ToString("dd/MM/yyyy");
+                    lblDelito.Text = fProfugo["delitos"].ToString();
                 }
             }
         }
