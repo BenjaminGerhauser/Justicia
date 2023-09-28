@@ -32,6 +32,7 @@ namespace Justicia
                 {
                     dataGridView1.Rows.Add(fBuscar["nombre"], fBuscar["alias"]);
                 }
+                
             }
         }
 
