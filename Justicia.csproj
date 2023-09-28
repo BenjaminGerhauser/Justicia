@@ -52,6 +52,12 @@
     <Compile Include="Agregar profugo.Designer.cs">
       <DependentUpon>Agregar profugo.cs</DependentUpon>
     </Compile>
+    <Compile Include="buscarPorNombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscarPorNombre.Designer.cs">
+      <DependentUpon>buscarPorNombre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Agregar profugo.resx">
       <DependentUpon>Agregar profugo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buscarPorNombre.resx">
+      <DependentUpon>buscarPorNombre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

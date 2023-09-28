@@ -31,18 +31,25 @@ namespace Justicia
 
         private void lstProfugos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            foreach (DataRow fProfugo in tProfugo.Rows)
-            {
-                if (fProfugo["id"].ToString() == lstProfugos.SelectedValue.ToString())
-                {
-                    pictureBoxFoto.Image = Image.FromFile( $"Profugos/{fProfugo["foto"]}");
-                    lblAlias.Text = fProfugo["alias"].ToString();
-                    DateTime fecha = Convert.ToDateTime(fProfugo["profugo_desde"]);
-                    lblDesde.Text = fecha.ToString("dd/MM/yyyy");
-                    lblDelito.Text = fProfugo["delitos"].ToString();
-                }
-            }
+
+            DataRow datos = tProfugo.Rows.Find(lstProfugos.SelectedValue);
+
+            pictureBoxFoto.Load($"FOTOS PROFUGOS/{datos["foto"]}");
+            lblAlias.Text = datos["alias"].ToString();
+            DateTime fecha = Convert.ToDateTime(datos["profugo_desde"]);
+            lblDesde.Text = fecha.ToString("dd/MM/yyyy");
+
+            //foreach (DataRow fProfugo in tProfugo.Rows)
+            //{
+            //    if (fProfugo["id"].ToString() == lstProfugos.SelectedValue.ToString())
+            //    {
+            //        pictureBoxFoto.Image = Image.FromFile( $"Profugos/{fProfugo["foto"]}");
+            //        lblAlias.Text = fProfugo["alias"].ToString();
+            //        DateTime fecha = Convert.ToDateTime(fProfugo["profugo_desde"]);
+            //        lblDesde.Text = fecha.ToString("dd/MM/yyyy");
+            //        lblDelito.Text = fProfugo["delitos"].ToString();
+            //    }
+            //}
         }
     }
 }

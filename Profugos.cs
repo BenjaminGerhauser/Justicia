@@ -29,9 +29,9 @@ namespace Justicia
 
             adaptador.Fill(tabla);
 
-            //DataColumn[] vec = new DataColumn[1];
-            //vec[0] = tabla.Columns["Profugos"];
-            //tabla.PrimaryKey = vec;
+            DataColumn[] vec = new DataColumn[1];
+            vec[0] = tabla.Columns["id"];
+            tabla.PrimaryKey = vec;
 
         }
 
